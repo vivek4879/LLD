@@ -33,3 +33,20 @@ The `.md` files follow a consistent design process:
 4. **Implementation** — core logic first, then edge cases
 
 When working on a new problem, follow this same structure. Walk through the design before writing code.
+
+## Session Log
+
+### 2026-04-01
+**Completed:** Dynamic Array (`DynamicArray/DynamicArray.java` + `Main.java`)
+- Full implementation: constructor, `addElement` (with doubling resize), `removeElement`, `getElementAtIndex`, `arrayLength`
+- All fields made `private` (encapsulation)
+- Proper exception types: `IllegalArgumentException` (bad input), `IllegalStateException` (empty array), `IndexOutOfBoundsException` (bad index)
+- Compiled and tested successfully
+
+**Decisions:**
+- Remove from end only (O(1)) — no index-based removal
+- Double capacity on resize (amortized O(1) add)
+
+**Repo setup:** Initialized git, pushed to `https://github.com/vivek4879/LLD`, added README with full problem list
+
+**Next session:** Start Singly Linked List (`LinkedList/` directory)
