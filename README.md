@@ -8,8 +8,8 @@ A hands-on repository for learning low-level design, data structures, and object
 | # | Problem | Status |
 |---|---------|--------|
 | 1 | Dynamic Array | Done |
-| 2 | Singly Linked List | In Progress |
-| 3 | Double-ended Queue | Pending |
+| 2 | Singly Linked List | Done |
+| 3 | Double-ended Queue | In Progress |
 | 4 | Binary Search Tree | Pending |
 | 5 | Hash Table | Pending |
 | 6 | Heap | Pending |

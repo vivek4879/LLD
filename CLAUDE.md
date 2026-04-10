@@ -50,3 +50,21 @@ When working on a new problem, follow this same structure. Walk through the desi
 **Repo setup:** Initialized git, pushed to `https://github.com/vivek4879/LLD`, added README with full problem list
 
 **Next session:** Start Singly Linked List (`LinkedList/` directory)
+
+### 2026-04-03
+**Completed:** Singly Linked List (`LinkedList/LinkedList.java` + `Main.java`)
+- Full implementation: `insertHead`, `insertTail`, `insertAtIndex`, `deleteHead`, `deleteTail`, `deleteAtIndex`, `deleteByValue`, `getValueByIndex`, `contains`, `getSize`, `displayList`
+- Node as `private static` inner class (encapsulation, no unnecessary outer reference)
+- 0-indexed API throughout
+- Proper exceptions: `IllegalStateException` (empty list ops), `IndexOutOfBoundsException` (bad index reads)
+- Compiled and tested manually via `Main.java`
+
+**Decisions:**
+- `private static` inner class for Node — implementation detail, not public API
+- `size` field stored (O(1) getSize) rather than computed on traversal
+- Insert methods return `void` (always succeed); delete methods return the removed value; `deleteByValue` returns `boolean`
+- `displayList` is `void`, prints to stdout
+
+**Added:** `.gitignore` with `.vscode/`
+
+**Next session:** Start Double-ended Queue (`Deque/` directory). Use JUnit for testing this time.
