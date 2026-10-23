@@ -68,3 +68,25 @@ When working on a new problem, follow this same structure. Walk through the desi
 **Added:** `.gitignore` with `.vscode/`
 
 **Next session:** Start Double-ended Queue (`Deque/` directory). Use JUnit for testing this time.
+
+### 2026-04-10
+**In progress:** Deque (`Deque/Deque.java`) — circular array, generic
+- Skeleton + design doc (`Deque.md`) committed last session; this session started the implementation
+- Done so far: class declaration `Deque<T>`, all fields `private`, constructor (`int capacity`), `isEmpty()`, `size()`, `addLast(T)`
+- Generic array workaround: `(T[]) new Object[capacity]` with `@SuppressWarnings("unchecked")`
+- Constructor param named `capacity` (not `size`) to keep "allocated room" vs "elements stored" distinct
+- Resize check is **before** the insert in `addLast` (`if (size == array.length) resize();`) — currently commented out so the file compiles without `resize()` existing yet
+
+**Decisions reinforced:**
+- `tail` = next-empty-slot convention (matches Java's `ArrayDeque`)
+- Pointer advance: `(ptr + 1) % length`. Derived from first principles, not memorized.
+- Resize must run **before** insert, not after — otherwise the new element overwrites an existing slot when the deque is full
+
+**Next session — pick up here:**
+1. Implement `private void resize()` — allocate `2 * array.length`, copy in logical order via `newArray[i] = array[(head + i) % array.length]`, reset `head = 0`, `tail = size`
+2. Uncomment the `resize()` call in `addLast`
+3. Implement `addFirst(T)` — needs the retreat formula `(head - 1 + length) % length` (the `+ length` is to dodge Java's negative-remainder gotcha)
+4. Implement `removeFirst`, `removeLast` (null out slots for GC, throw `IllegalStateException` on empty)
+5. Implement `peekFirst`, `peekLast`
+6. Write `Main.java` test scenarios: empty exceptions, single element, wraparound, resize trigger
+7. **After core works:** power-of-two capacity optimization (constrain `array.length` to power of 2, replace `% length` with `& (length - 1)`, eliminate `size` field) — this is the Java `ArrayDeque` trick
