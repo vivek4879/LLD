@@ -29,6 +29,7 @@ A hands-on repository for learning low-level design, data structures, and object
 | 5 | Parking Lot | `ParkingLot/` | In Progress |
 | 6 | Movie Ticket Booking | `movieTicketBooking/` | In Progress |
 | 7 | Logging Service | `loggingService/` | Design / pseudocode |
+| 8 | Warehouse Manager | `WarehouseManager/` | In Progress |
 
 ## Repo Layout
 
