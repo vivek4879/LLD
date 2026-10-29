@@ -22,14 +22,15 @@ A hands-on repository for learning low-level design, data structures, and object
 ### Object-Oriented Design
 | # | Problem | Directory | Status |
 |---|---------|-----------|--------|
-| 1 | Connect Four | `ConnectFour/` | Design only |
-| 2 | Amazon Locker | `AmazonLocker/` | Done |
-| 3 | Elevator System | `Elevator/` | In Progress |
-| 4 | File System | `FIleSystem/` | In Progress |
-| 5 | Parking Lot | `ParkingLot/` | In Progress |
-| 6 | Movie Ticket Booking | `movieTicketBooking/` | In Progress |
+| 1 | Connect Four | `ConnectFour/` | Design / pseudocode |
+| 2 | Amazon Locker | `AmazonLocker/` | Design / pseudocode |
+| 3 | Elevator System | `Elevator/` | Design / pseudocode |
+| 4 | File System | `FIleSystem/` | Design / pseudocode |
+| 5 | Parking Lot | `ParkingLot/` | Design / pseudocode |
+| 6 | Movie Ticket Booking | `movieTicketBooking/` | Design / pseudocode |
 | 7 | Logging Service | `loggingService/` | Design / pseudocode |
-| 8 | Warehouse Manager | `WarehouseManager/` | In Progress |
+| 8 | Warehouse Manager | `WarehouseManager/` | Design / pseudocode |
+| 9 | Rate Limiter | `RateLimiter/` | Design / pseudocode |
 
 ## Repo Layout
 
